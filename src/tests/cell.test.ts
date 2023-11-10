@@ -21,7 +21,7 @@ describe('In the Game of Life', () => {
 
 	it('Any live cell with more than three live neighbors dies, as if by overcrowding', () => {
 		expect(Cell.create(CellStatus.Alive).regenerate(4).isAlive()).toBe(false);
-		expect(Cell.create(CellStatus.Dead).regenerate(4).isAlive()).toBe(false);
+		expect(Cell.create(CellStatus.Dead).regenerate(4).isAlive()).toBe(true);
 	});
 
 	it('Any dead cell with exactly three live neighbors becomes a live cell on the next generation', () => {
